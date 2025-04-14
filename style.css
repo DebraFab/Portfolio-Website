@@ -24,6 +24,7 @@ body{
     background: var(--bg-color);
     color:var(--text-color);
     margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 .header{
