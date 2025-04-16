@@ -133,8 +133,8 @@ box-shadow:0 0 25px var(--main-color),
     display:inline-flex;
     justify-content:center;
     align-items:center;
-    width:4.5rem;
-    height:4.5rem;
+    width:5rem;
+    height:5rem;
     background:transparent;
     border:2px solid var(--main-color);
     font-size:1rem;
@@ -400,7 +400,6 @@ box-shadow:0 0 25px var(--main-color),
 .language-box{
     background-color: var(--main-color);
     height:150px;
-    
     border-radius:3rem;
     border:5px solid transparent;
     cursor:pointer;
