@@ -290,16 +290,22 @@ box-shadow:0 0 25px var(--main-color),
     flex-wrap: wrap;
     position:relative;
 }
-.timeline-items::before{
-    content:"";
-    position:absolute;
-    width:5px;
-    height:90%;
-    background-color:var(--main-color);
-    margin-top: 10px;
-    margin-left: 525px;
-    left: calc(50%-1px);
+.timeline-items {
+    position: relative; /* this is important for positioning the ::before */
+    
 }
+
+.timeline-items::before {
+    content: "";
+    position: absolute;
+    top: 11px; /* use this instead of margin-top */
+    bottom: 1px; /* this will help control the height dynamically */
+    width: 5px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(0%); /* perfectly centers the line */
+}
+
 .timeline-item{
     margin-bottom: 40px;
     width:100%;
@@ -317,6 +323,7 @@ box-shadow:0 0 25px var(--main-color),
 .timeline-item:nth-child(even){
     padding-left:calc(50% + 30px);
 }
+
 .timeline-dot{
     height:21px;
     width:21px ;
@@ -339,8 +346,8 @@ box-shadow:0 0 25px var(--main-color),
     padding: 30px 50px;
     transition: .3s ease-in-out;
     text-align: center;
-    font-size:20px;
-    font-weight:800;
+    font-size:18px;
+    font-weight:400;
     color:white;
     margin:6px 0 15px;
 }
@@ -372,7 +379,7 @@ box-shadow:0 0 25px var(--main-color),
     margin:0 0 10px;
     font-weight:700;
 }
-.timeline-content p{
+.timeline-content ul{
     color:white;
     font-size:16px;
     font-weight:300;
@@ -391,6 +398,7 @@ box-shadow:0 0 25px var(--main-color),
 .projects{
     background: var(--bg-color);
     color:black;
+    padding: 45px;
 }
 
 .projects h2{
@@ -403,49 +411,78 @@ box-shadow:0 0 25px var(--main-color),
     text-align: center;
 }
 
-.language-container{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    align-items:center;
-    gap:2.5rem;
+
+.dropdown-btn {
+    background-color: var(--main-color);
+    margin-bottom: 20px;
+    padding: 10px;
+    height:70px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius:3rem;
+    color: azure;
+    border:5px solid transparent;
+    transition:.4s ease-in-out;
 }
 
-.language-box{
-    background-color: var(--main-color);
-    height:150px;
-    border-radius:3rem;
-    border:5px solid transparent;
-    cursor:pointer;
-    transition:.4s ease-in-out
-}
-.language-box:hover{
+.dropdown-btn:hover {
     background:white;
     color:black;
-    border:5px solid car(--main-color);
+    border:5px solid var(--main-color);
     transform:scale(1.03);
 }
-.language-box.programming-description{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    max-height:200px;
-    justify-content: left;
-    align-items: baseline;
-    padding: 5rem 5rem;
-}
-.programming-description p{
-font-size:1.6rem;
-font-weight: 200;
-max-height: 100px;
-line-height:1.7;
-margin:auto;
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
 }
 
-.programming-description h4{
-    font-size:1.6rem;
-    font-weight: 600;
-    max-height: 100px;
-    line-height:1.7;
-    margin:auto;
+/* PROJECT ITEM STYLING */
+.project-item {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    color: white !important;
+}
+.project-item a {
+    color: white !important; /* Or another contrasting color */
+    font-size: 2rem;
+    display: inline-block;
     text-align: center;
-    }
+  }
+  
+
+.project-item:hover .description-box {
+    display: block;
+}
+
+/* TOOLTIP DESCRIPTION ON HOVER */
+.description-box {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background: rgba(0,0,0,0.85);
+    border: 1px solid var(--main-color);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    z-index: 2;
+    width: max-content;
+    max-width: 300px;
+}
+
+.work-history{
+    text-align: center;
+    padding:100px 15px;
+    background:var(--second-bg-color)
+}

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang=""en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewpoint"
-    content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <Title>Portfolio Website</Title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -50,71 +49,135 @@
     <div class = "timeline-items">
         
         <div class="timeline-item">
+
             <div class="timeline-dot"></div>
+
                 <div class="timeline-date">2018</div>
+
                 <div class="timeline-period">
                 <h3> Westside Highschool</h3>
                 <p>Graduated: June 12 2022</p>
                 <p>GPA:3.33</p>
             </div>
+
                 <div class="timeline-content">
                     <h2>HCC College Courses:</h2> 
-                    <p>Learning Framework, Intro. To Humanities, General Psychology, General Biology, Environmental Science,
-                        Federal Government, United States History, Nutrition Diet Therapy, Texas Government, Western Civilization, Government, Algebra
-                    </p>
+                    <ul>
+                        <li>Learning Framework</li>
+                        <li>Intro. To Humanities</li>
+                        <li>General Psychology</li>
+                        <li>General Biology</li>
+                        <li>Environmental Science</li>
+                        <li>Federal Government</li>
+                        <li>United States History</li>
+                        <li>Nutrition Diet Therapy</li>
+                        <li>Texas Government</li>
+                        <li>Western Civilization</li>
+                        <li>Government</li>
+                        <li></li>
+                    </ul>
+                    
                 </div>
+
                 <div class="timeline-content">
                     <h2>AP Courses:</h2> 
-                    <p>AP Human Geography, AP World History, AP Language and Composition, Honor Physics</p>
+                    <ul>
+                        <li>AP Human Geography</li>
+                        <li>AP World History</li>
+                        <li>AP Language and Composition</li>
+                        <li>Honor Physics</li>
+                    </ul>
                 </div>
+
                 <div class="timeline-content">
                 <h2>Engineering Courses:</h2> 
-                    <p>Introduction to Engineering Design, Digital Electronics, Engineering DPS</p>
+                <ul>
+                    <li>Introduction to Engineering Design</li>
+                    <li>Digital Electronics</li>
+                    <li>Engineering DPS</li>
+                </ul>
                 </div>
             
         </div>
-<div class="timeline-item">
-    <div class="timeline-dot"></div>
-        <div class="timeline-date">2022</div>
-        <div class="timeline-content">
-            <h3>University Of Houston</h3>
-            <P></P>
+        <div class="timeline-item">
+            <div class="timeline-dot">
+            </div>
+            <div class="timeline-date">2022
+            </div>
+
+            <div class="timeline-period">
+                <h3> University Of Houston</h3>
+                <p>Major: Supply Chain and Logistics Technology</p>
+                <p>Focus/Track: System Management</p>
+                <p>Expected Graduation: May 12 2026</p>
+                <p>GPA:2.59</p>
+            </div>
+            
+            <div class="timeline-content">
+            <h2>Math Classes:</h2>
+            <ul>
+                <li>Calculus 1</li> 
+                <li>Elementary Statistical Methods</li>
+                <li>Finite Math with Applications</li>
+            </ul>
         </div>
-    
-</div>
+        <div class="timeline-content">
+            <h2>Supply Chain & Logistics Technology Classes: </h2>
+                <ul>
+                    <li>Intro to Logistics Technology</li>
+                    <li>Distrubution Channels</li>
+                    <li>Transportation Law</li>
+                    <li>Procurment</li>
+                    <li>Transport Economics & Policies</li>
+                  </ul>
+        </div>
+        <div class="timeline-content">
+            <h2>Technology Leadership and Innovation Management Classes:</h2>
+           
+        </div>
+        <div class="timeline-content">
+            <h2>Misc. Classes:</h2>
+        </div>
+      
     </div>
+
+</div>
+
 </section>
+
 <section class="projects" id="projects">
     <h2 class="heading">Projects</h2>
     <h1>Sorted By Programming Languages</h1>
-
-    <div class="language-container">
-        <div class="language-box">
-            <div class="programming-description">
-                <h4>HTML&CSS</h4>
-                <p>Projects here showcase how I use HTML and CSS to create clean, responsive, and accessible websites—from landing pages to personal layouts.</p>
-            </div>
-        </div>
-
-        <div class="language-box">
-            <div class="programming-description">
-                <h4>Python</h4>
-                <p>In this section, you’ll find projects that use Python for data analysis, automation, scripting, and more—demonstrating its wide range and readability.</p>
-            </div>
-        </div>
-        <div class="language-box">
-            <div class="programming-description">
-                <h4>C++</h4>
-                <p>These projects highlight my work with C++, focusing on problem-solving, algorithm design, and foundational programming skills in a low-level language.</p>
-            </div>
-        </div>
-        <div class="language-box">
-            <div class="programming-description">
-                <h4>Misc. Projects</h4>
-                <p>This section features projects that don’t fit into one category—built using tools like SQL, Kotlin, Linux scripts, and more as I expand my tech stack.</p>
-            </div>
-        </div>
+  
+    <!-- JS Projects -->
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown('js-projects')">JavaScript</button>
+      <div class="dropdown-content" id="js-projects"></div>
     </div>
+  
+    <!-- Python Projects -->
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown('python-projects')">Python</button>
+      <div class="dropdown-content" id="python-projects"></div>
+    </div>
+  
+    <!-- React Projects -->
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown('react-projects')">React</button>
+      <div class="dropdown-content" id="react-projects"></div>
+    </div>
+  
+    <!-- HTML/CSS Projects -->
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown('htmlcss-projects')">HTML/CSS</button>
+      <div class="dropdown-content" id="htmlcss-projects"></div>
+    </div>
+  </section>
+  
+
+<section class="work-history" id="work-history">
+    <H1>Work History</H1>
+    
 </section>
 
     <script src = "script.js"></script>
