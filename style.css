@@ -291,8 +291,8 @@ box-shadow:0 0 25px var(--main-color),
     position:relative;
 }
 .timeline-items {
-    position: relative; /* this is important for positioning the ::before */
-    
+     position: relative;
+     margin: 0 auto;
 }
 
 .timeline-items::before {
