@@ -9,7 +9,7 @@ const projects = {
     "htmlcss-projects": [
       { title: "This Website Landing Page", link: "https://debrafab.github.io/Portfolio-Website/", description: "Basic responsive poertfolio  page.", year: 2025 }
     ],
-    "c++-projects": [
+    "misc-projects": [
       { title: "", link: "", description: "", year: 2025 }
     ]
   };
